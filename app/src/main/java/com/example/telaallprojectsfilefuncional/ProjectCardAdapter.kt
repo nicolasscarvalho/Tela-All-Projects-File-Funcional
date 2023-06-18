@@ -45,10 +45,11 @@ class ProjectCardAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
         /*private val projectImage = itemView.ProjectImage*/
         private val projectTitle = itemView.ProjectTitle
         private val projectDate = itemView.ProjectDate
+        private val projectImage = itemView.ProjectImage
 
         fun bind (projectCardObject : projectCard) {
-            /*projectCard.*/
-            /*projectImage.*/
+
+            /*projectImage.setImage()*/
             projectTitle.text = projectCardObject.title
             projectDate.text = projectCardObject.date
         }

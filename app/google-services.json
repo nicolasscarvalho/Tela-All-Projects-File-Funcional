@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "62397536244",
+    "project_id": "telaallprojectsfilefuncional",
+    "storage_bucket": "telaallprojectsfilefuncional.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:62397536244:android:e46c5293592f9494244ba1",
+        "android_client_info": {
+          "package_name": "com.example.telaallprojectsfilefuncional"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "62397536244-6tvegoe3qjjitudd21rcprr513frpn2l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGKR4tNwsmD8ykxSrvcmolZY4j_YJAb40"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "62397536244-6tvegoe3qjjitudd21rcprr513frpn2l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
