@@ -1,7 +1,7 @@
 package com.example.telaallprojectsfilefuncional.models
 
 data class projectCard(
-    var cardImageURL: String,
-    var title: String,
-    var date: String
+    var cardImageURL: String ?= null,
+    var title: String ?= null,
+    var date: String ?= null
 )
