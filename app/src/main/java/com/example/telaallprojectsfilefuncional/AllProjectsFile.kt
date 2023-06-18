@@ -1,9 +1,9 @@
-package com.example.module
+package com.example.telaallprojectsfilefuncional
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.module.databinding.ActivityAllProjectsFileBinding
+import com.example.telaallprojectsfilefuncional.databinding.ActivityAllProjectsFileBinding
 
 class AllProjectsFile : AppCompatActivity() {
 
@@ -18,12 +18,13 @@ class AllProjectsFile : AppCompatActivity() {
 
         initRecycleView()
         addAllProjectsDatasource()
+
     }
 
     private fun initRecycleView() {
         this.ProjectCardAdapter = ProjectCardAdapter()
 
-        binding.AllProjectsRecycleView.layoutManager = LinearLayoutManager(this@AllProjectsFile)
+        binding.AllProjectsRecycleView.layoutManager = LinearLayoutManager(this)
         binding.AllProjectsRecycleView.adapter = this.ProjectCardAdapter
     }
 

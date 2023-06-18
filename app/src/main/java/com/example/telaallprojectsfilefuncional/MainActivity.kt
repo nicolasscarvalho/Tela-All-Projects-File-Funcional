@@ -2,11 +2,34 @@ package com.example.telaallprojectsfilefuncional
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.module.R
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.telaallprojectsfilefuncional.databinding.ActivityAllProjectsFileBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityAllProjectsFileBinding
+    private lateinit var ProjectCardAdapter: ProjectCardAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
+        binding = ActivityAllProjectsFileBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        initRecycleView()
+        addAllProjectsDatasource()
+
+    }
+
+    private fun initRecycleView() {
+        this.ProjectCardAdapter = ProjectCardAdapter()
+
+        binding.AllProjectsRecycleView.layoutManager = LinearLayoutManager(this)
+        binding.AllProjectsRecycleView.adapter = this.ProjectCardAdapter
+    }
+
+    private fun addAllProjectsDatasource() {
+        val allProjectsSourceData = DataSource.generateAllProjectsDataset()
+        this.ProjectCardAdapter.setDataset(allProjectsSourceData)
     }
 }

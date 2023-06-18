@@ -12,7 +12,7 @@
         android:theme="@style/Theme.TelaAllProjectsFileFuncional"
         tools:targetApi="31">
         <activity
-            android:name=".AllProjectsFile"
+            android:name="com.example.telaallprojectsfilefuncional.AllProjectsFile"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

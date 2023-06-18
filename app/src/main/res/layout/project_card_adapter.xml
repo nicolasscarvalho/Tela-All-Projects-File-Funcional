@@ -1,71 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/ProjectCard"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_row="0"
-    android:layout_column="0"
-    app:cardCornerRadius="10dp"
-    android:layout_margin="18dp"
-    tools:context=".ProjectCardAdapter">
+    android:padding="18dp">
 
 
-    <LinearLayout
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ProjectCard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/project_card"
-        android:orientation="vertical">
-
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:cardCornerRadius="10dp">
-
-            <ImageView
-                android:id="@+id/ProjectImage"
-                android:layout_width="147dp"
-                android:layout_height="95dp"
-                android:padding="0dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/projeto3" />
-
-        </androidx.cardview.widget.CardView>
+        android:layout_margin="18dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginEnd="91dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:context=".AllProjectsFile"
+        tools:ignore="MissingConstraints">
 
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingHorizontal="13dp"
-            android:paddingVertical="7dp">
+            android:background="@color/project_card"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/ProjectTitle"
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="320dp"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:id="@+id/ProjectImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="177dp"
+                    android:padding="0dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/projeto3" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/proximanovabold"
-                android:text="Meu projeto 3"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="15sp" />
+                android:layout_height="60dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="13dp"
+                android:paddingVertical="7dp">
 
-            <TextView
-                android:id="@+id/ProjectDate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/proximanovaregular"
-                android:text="Criado em 01/03/2023"
-                android:textAlignment="center"
-                android:textColor="@color/subtitle_project_card"
-                android:textSize="11sp" />
+                <TextView
+                    android:id="@+id/ProjectTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/proximanovabold"
+                    android:text="Meu projeto 3"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
+                <TextView
+                    android:id="@+id/ProjectDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/proximanovaregular"
+                    android:text="Criado em 01/03/2023"
+                    android:textAlignment="center"
+                    android:textColor="@color/subtitle_project_card"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
 
-    </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
-</androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,10 +1,10 @@
-package com.example.module
+package com.example.telaallprojectsfilefuncional
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.module.models.projectCard
+import com.example.telaallprojectsfilefuncional.databinding.ProjectCardAdapterBinding
+import com.example.telaallprojectsfilefuncional.models.projectCard
 
 
 class ProjectCardAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
@@ -12,9 +12,9 @@ class ProjectCardAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
     private var projectCards: List<projectCard> = ArrayList()
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProjectCardViewHolder {
         return ProjectCardViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.project_card_adapter, parent, false)
+            ProjectCardAdapterBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         )
     }
 
@@ -37,9 +37,9 @@ class ProjectCardAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
     }
 
 
-    class ProjectCardViewHolder constructor(
-        itemView: View
-    ) : RecyclerView.ViewHolder(itemView) {
+    class ProjectCardViewHolder(
+        itemView: ProjectCardAdapterBinding
+    ) : RecyclerView.ViewHolder(itemView.root) {
 
         /*private val projectCard = itemView.ProjectCard*/
         /*private val projectImage = itemView.ProjectImage*/

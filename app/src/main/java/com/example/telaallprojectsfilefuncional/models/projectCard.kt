@@ -1,4 +1,4 @@
-package com.example.module.models
+package com.example.telaallprojectsfilefuncional.models
 
 data class projectCard(
     var cardRow: Int,
